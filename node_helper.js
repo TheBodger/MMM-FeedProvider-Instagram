@@ -17,15 +17,8 @@
 //this.name String The name of the module
 
 var NodeHelper = require("node_helper");
-var moment = require("moment");
 
-var FeedParser = require('feedparser');
 var request = require('request'); // for fetching the feed
-
-const axios = require('axios');
-const fs = require('fs').promises;
-
-const Twitter = require('twitter');
 
 //pseudo structures for commonality across all modules
 //obtained from a helper file of modules
@@ -403,7 +396,7 @@ module.exports = NodeHelper.create({
 
 			post['categories'] = [];
 
-			//"Photo by •M R S & M R S  E D W A R D S• in Suffolk. Image may contain: living room, table and indoor"
+			//"Photo by Â•M R S & M R S  E D W A R D SÂ• in Suffolk. Image may contain: living room, table and indoor"
 
 			if (media[mIndex].node.accessibility_caption != null) {
 
