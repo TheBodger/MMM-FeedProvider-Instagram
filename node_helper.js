@@ -19,6 +19,7 @@
 var NodeHelper = require("node_helper");
 
 var request = require('request'); // for fetching the feed
+var moment = require('moment'); 
 
 //pseudo structures for commonality across all modules
 //obtained from a helper file of modules
@@ -27,11 +28,6 @@ var LOG = require('../MMM-FeedUtilities/LOG');
 var RSS = require('../MMM-FeedUtilities/RSS');
 var QUEUE = require('../MMM-FeedUtilities/queueidea');
 var UTILITIES = require('../MMM-FeedUtilities/utilities');
-
-// structures
-
-var rsssource = new RSS.RSSsource();
-rsssource.sourceiconclass = 'fa fa-instagram instagramrainbow';
 
 // local variables, held at provider level as this is a common module
 //these are largely for the authors reference and are not actually used in thsi code
@@ -303,12 +299,18 @@ module.exports = NodeHelper.create({
 		this.maxfeeddate = new Date(0);
 
 		var rssitems = new RSS.RSSitems();
+		// structures
+
+		var rsssource = new RSS.RSSsource();
+		rsssource.sourceiconclass = 'fa fa-instagram instagramrainbow';
+		rsssource.title = feed.sourcetitle;
+		rsssource.sourcetitle = feed.sourcetitle;
 
 		var sourcetitle = feed.sourcetitle;
 		// we use request module to capture the data for us
 		// start of core instagram loop
 
-		console.log(api_url);
+		//console.log(api_url);
 
 		var api_url = `https://www.instagram.com/explore/tags/${feed.searchHashtag}/?__a=1`;
 
@@ -371,7 +373,9 @@ module.exports = NodeHelper.create({
 		var posts = items.graphql.hashtag.edge_hashtag_to_top_posts.edges;
 		var media = items.graphql.hashtag.edge_hashtag_to_media.edges;
 
-		console.log(this.name + " #### instagram posts.length " + media.length);
+		media = media.concat(posts);
+
+		console.log(this.name + " #### instagram posts.length " + media.length + " " + posts.length);
 
 		if (self.debug) { self.logger[moduleinstance].info("feedparser readable: "); }
 

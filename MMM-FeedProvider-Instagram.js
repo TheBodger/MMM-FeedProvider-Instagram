@@ -164,9 +164,6 @@ Module.register("MMM-FeedProvider-Instagram", {
 			// the node helper uses a date on an item to determine which ones to send
 			// so we have to assume that we wont get duplicates - maybe can add checking laters
 
-			console.log(">>>>>>>>>>>>>>>>>>>>>>>>>> " + nhpayload.payloadformodule.length);
-			console.log(nhpayload.payloadformodule);
-
 			nhpayload.payloadformodule.forEach(function (stuffitem) {
 
 				//create a new stuff entry and add to the tracking data
@@ -233,7 +230,7 @@ Module.register("MMM-FeedProvider-Instagram", {
 					fdp.source = nhpayload.source;
 					fdp.payload = payload.stuffitems;
 
-					console.log(this.identifier + "  >>>>>> Sending data: " + fdp.title + " " + fdp.consumerid + " " + fdp.providerid + " " + payload.stuffitems.length);
+					//console.log(this.identifier + "  >>>>>> Sending data: " + fdp.title + " " + fdp.consumerid + " " + fdp.providerid + " " + payload.stuffitems.length);
 
 					this.sendNotification('FEED_PROVIDER_DATA', fdp);
 				}
