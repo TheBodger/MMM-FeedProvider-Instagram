@@ -1,3 +1,12 @@
+/* global Module, MMM-FeedProvider-Instagram */
+
+/* Magic Mirror
+ * Module: MMM-FeedProvider-Instagram
+ *
+ * By Neil Scott
+ * MIT Licensed.
+ */
+
 var startTime = new Date();
 
 var feedDisplayPayload = { consumerid: '', providerid: '', payload: '' };
