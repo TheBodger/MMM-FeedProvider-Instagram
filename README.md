@@ -59,7 +59,7 @@ To use this module, add the following configuration block to the modules array i
 | `waitforqueuetime`            |*Ignore* -  Queue delay between ending one queue item and starting the next <br><br> **Possible values:** a number in milliseconds. <br> **Default value:** `10`
 | `Feed Format`            |
 | `feedname`            |*Required* -  Name of the feed for reference purposes<br><br> **Possible values:** Any unique string. <br> **Default value:** none
-| `feedtitle`            |*Required* -  Title of the feed that will be displayed as the source if enabled in the MMM-FeedDisplay output.<br><br> **Possible values:** Any unique string. <br> **Default value:** none
+| `feedtitle`            |*Required* -  Title of the feed for reference purposes.<br><br> **Possible values:** Any unique string. <br> **Default value:** none
 | `searchHashtag`            |*Required* -  Search string, exclude a leading # <br><br> **Possible values:** any valid string to search for within instgram posts.<br> **Default value:** none
 | `oldestage`            |*Required* -  Filter out any articles older than this "age" (As defined by the pubdate in the Instagram feed). <br><br> **Possible values:** 'today' or a number of minutes or a valid date(See [Moment.js formats](http://momentjs.com/docs/#/parsing/string-format/). <br> **Default value:** none
 
