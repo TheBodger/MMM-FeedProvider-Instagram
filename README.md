@@ -10,6 +10,9 @@ the -Instagram module will monitor and format any Instagram feeds it is configur
 ![Example of MMM-FeedProvider-Instagram output](images/screenshot.png?raw=true "Example screenshot")
 
 ### Dependencies
+
+Before installing this module, use https://github.com/TheBodger/MMM-FeedUtilities to setup the MMM-Feed... dependencies and  install all modules 
+
 The following node modules are required: See https://github.com/TheBodger/MMM-FeedUtilities for a simple install process for all MMM-Feedxxx modules and dependencies
 
 ```
