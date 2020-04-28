@@ -48,7 +48,7 @@ To use this module, add the following configuration block to the modules array i
 
 | Option                  | Details
 |------------------------ |--------------
-| `text`                | *Optional* - 
+| `text`                | *Optional* - <br><br> **Possible values:** Any string.<br> **Default value:** The Module name
 | `consumerids`            | *Required* - a list of 1 or more consumer modules this module will provide for.<br><br> **Possible values:** An array of strings exactly matching the ID of one or more MMM-FeedDisplay modules <br> **Default value:** none
 | `id`         | *Required* - The unique ID of this provider module<br><br> **Possible values:** any unique string<br> **Default value:** none
 | `datarefreshinterval`            | *Optional* - milliseconds to pause before checking for new data in the feeds.<br><br> **Possible values:** a number in milliseconds <br> **Default value:** `60000` 

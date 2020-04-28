@@ -20,27 +20,12 @@ Module.register("MMM-FeedProvider-Instagram", {
 		text: "MMM-FeedProvider-Instagram",
         consumerids: [], // the unique id of the consumer(s) to listen out for
         id: "", //the unique id of this provider
-        consumer_key: null,
-        consumer_secret: null,
-        access_token_key: null,
-        access_token_secret: null,
-        screenName: null,
         listToShow: 'TIMELINE', //SEARCH
         // optional
         datarefreshinterval: 5000*60,
-        totalTweetsPerUpdate: 25,
-        excludeTweetsWithQuotes: false,
-        excludeRetweets: true,
-        excludeMediaTweets: false,
-        excludeLinkTweets: false,
-        excludeTweetLengthLessThan: 16,
-        excludeTweetsWithoutText: [],
-        allowSpecialCharacters: false,
-        language: '', //leave empty and only use if requested
         feeds: [
             { feedname: 'TKMaxx', feedtitle: 'TKMaxx', searchHashtag: 'TKMaxx', oldestage: '2020-04-01 00:00:01' },
             { feedname: 'BBC', feedtitle: 'BBC', searchHashtag: 'BBC', oldestage: 'today' },
-            
         ],
         waitforqueuetime: 0010, //dont change this - it simply helps the queue processor to run with a controlled internal loop
     },
