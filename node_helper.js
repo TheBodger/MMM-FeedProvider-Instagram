@@ -103,7 +103,7 @@ module.exports = NodeHelper.create({
 		//options are timestamp format, today for midnight + 0.0001 seconds today, or age in minutes
 		//determine the format of the data in age
 
-		console.log(age);
+		//console.log(age);
 
 		var filterDate = new Date();
 
@@ -125,7 +125,7 @@ module.exports = NodeHelper.create({
 				}
 				else {
 
-					console.log(this.name + " Invalid date provided for filter age of feeds:" + age.toString());
+					console.error(this.name + " Invalid date provided for filter age of feeds:" + age.toString());
 				}
 
 			}
@@ -271,7 +271,7 @@ module.exports = NodeHelper.create({
 
 		if (err) {
 
-			console.log(err, err.stack);
+			console.error(err, err.stack);
 
 		}
 
@@ -367,7 +367,7 @@ module.exports = NodeHelper.create({
 
 		if (err) {
 
-			console.log(err, err.stack);
+			console.error(err, err.stack);
 
 		}
 
@@ -386,7 +386,7 @@ module.exports = NodeHelper.create({
 
 		media = media.concat(posts);
 
-		console.log(this.name + " #### instagram posts.length " + media.length + " " + posts.length);
+		//console.log(this.name + " #### instagram posts.length " + media.length + " " + posts.length);
 
 		if (self.debug) { self.logger[moduleinstance].info("feedparser readable: "); }
 
