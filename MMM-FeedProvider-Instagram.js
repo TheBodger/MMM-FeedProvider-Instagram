@@ -65,7 +65,7 @@ Module.register("MMM-FeedProvider-Instagram", {
     notificationReceived: function (notification, payload, sender) {
 
         console.log(this.name + " recevived notification: " + notification + " with payload:");
-        console.log(JSON.stringify(payload));
+        //console.log(JSON.stringify(payload));
             ;
         if (sender) {
             Log.log(this.name + " received a module notification: " + notification + " from sender: " + sender.name);
