@@ -1,3 +1,6 @@
+# Currently under Repair since changes to the Instagram API
+
+
 # MMM-FeedProvider-Instagram Module
 
 This magic mirror module is a MMM-FeedProvider module that is part of the the MMM-Feedxxx interrelated modules.
@@ -27,7 +30,7 @@ To install the module, use your terminal to:
 
 ## Using the module
 
-### MagicMirror² Configuration
+### MagicMirrorÂ² Configuration
 
 To use this module, add the following configuration block to the modules array in the `config/config.js` file:
 ```js
